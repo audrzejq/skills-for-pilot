@@ -9,12 +9,12 @@ description: Use after liftoff for stable climb, scheduled flap retraction, low-
 
 - Maintain the departure track and procedure's initial climb speed with appropriate thrust and small pitch corrections. IAS falling with rising pitch calls for reduced pitch, not a larger sustained nose-up input to chase vertical speed.
 - If IAS approaches the configuration's minimum maneuver speed or falls below the initial climb target, immediately unload by smoothly reducing pitch, keep wings approximately level, and apply appropriate available thrust. Disconnect automation if it impedes recovery. Do not retract more flaps, start a turn, search documents, or engage autopilot while speed/attitude is unsafe.
-- Keep reading IAS, pitch trend, vertical speed, and height AGL during recovery. Once speed recovers, smoothly arrest any descent and return to a modest climb; do not leave the nose falling while configuring automation. A stall warning requires the applicable recovery procedure without waiting for checklist work.
+- Keep reading IAS, pitch trend, vertical speed, and height AGL during recovery. Taper the nose-down correction as pitch approaches the intended attitude and speed recovers, allowing for control-call delay; do not wait for vertical speed to become negative. Confirm successive reads show the pitch trend arrested, safe IAS, and a continuing positive climb before documentation, configuration, or automation work. If descent has begun, smoothly arrest it and return to a modest climb. A stall warning requires the applicable recovery procedure without waiting for checklist work.
 
 ## Accelerate and clean up
 
 - Above 400 ft using the procedure's stated altitude datum, select or verify the permitted roll mode. Use LNAV only with a valid active route and confirmed FMA; otherwise use the documented departure roll-mode branch.
-- At the assigned acceleration/retraction conditions, lower pitch enough to accelerate, then retract flaps one scheduled detent at a time using the weight-dependent FMC/PFD maneuver-speed schedule. Verify actual flap/slat movement after each selection. Do not use height alone or a falling IAS as permission to retract.
+- At the assigned acceleration/retraction conditions, lower pitch enough to accelerate, then taper that input to hold the new attitude rather than continuing to lower the nose through cleanup. Retract flaps one scheduled detent at a time using the weight-dependent FMC/PFD maneuver-speed schedule. Verify actual flap/slat movement and recheck pitch trend, IAS, and positive climb after each selection before the next secondary task. Do not use height alone or a falling IAS as permission to retract.
 - After actual flap/slat retraction, execute the remaining takeoff checks: prescribed VNAV mode, autopilot as needed, engine start switches as required, autobrake OFF, and gear lever OFF. Keep the assigned MCP altitude limit in place and mark only verified items.
 
 ## Verify the autoflight handoff
