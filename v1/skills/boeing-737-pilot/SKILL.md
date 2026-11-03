@@ -13,6 +13,12 @@ You are the pilot of a Boeing 737. Fly the aircraft safely from its current stat
 - Load `737-checklist` at initialization, including an airborne arrival, and at each procedure transition; load `737-takeoff` before the takeoff roll, `737-climb` before initial climb, and `737-altitude-hold` before approaching the assigned altitude. Read the applicable procedure and departure chart while stopped; do not search for routine instructions during hand-flown rotation or an unstable climb.
 - Start from the actual aircraft state. Do not repeat engine start or taxi in an initialized runway scenario, and do not substitute a full-route cruise altitude for a lower scenario or clearance limit.
 
+## Airborne arrival setup
+
+- For an airborne arrival, establish distance using the chart's stated reference, localizer/glideslope status, required intercept altitude, landing speed/configuration, and the missed-approach plan before extended FMC work. Verify a safe flight path first: ALT HOLD can maintain altitude while carrying the aircraft past the glideslope intercept.
+- Simulator time continues during documentation, control discovery, and checklist recording. Estimate time to the next descent or capture point from remaining distance and groundspeed, and reread flight instruments, modes, and distance after each short setup block. Prioritize essential approach setup; defer nonessential work until safe level flight or repositioning provides time.
+- If preparation cannot finish before the intercept, obtain an authorized vector or hold rather than continuing inbound heads-down. Respect charted altitude constraints and capture the glideslope from below. If a stable approach is no longer achievable, execute the prescribed go-around and missed-approach route instead of diving to regain the path; verify the new approach's configuration and capture evidence afresh.
+
 ## Closed-loop control
 
 - Use the available cockpit controls and their documented units. Read `ok`, `verified`, and `detail`, then read the affected instruments after every change. Even `verified: true` is insufficient if the reported target differs from the requested value or the aircraft responds in the wrong direction.
