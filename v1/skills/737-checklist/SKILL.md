@@ -1,6 +1,6 @@
 ---
 name: 737-checklist
-description: Use before movement and at each procedure transition to execute and record verified Boeing 737 checklist items.
+description: Use at initialization and each procedure transition to execute verified Boeing 737 checklist items, annunciator recall, and final arrival warning checks.
 ---
 
 # Boeing 737 checklist execution
@@ -10,6 +10,13 @@ description: Use before movement and at each procedure transition to execute and
 3. For each item: establish its stated condition, perform or verify the action, read the relevant aircraft indications, then call `mark_checklist` with the live identifiers and required response. Reading a procedure or changing a switch does not record completion.
 4. Verify that the mark is accepted and that checklist progress changes. Acceptance records your assertion; it does not supply missing aircraft evidence. Before leaving a section, read it back and resolve unmarked applicable items. Do not mark future, unverified, or failed actions complete; a historical trigger must have been observed, not inferred from the present state.
 5. Prepare the upcoming airborne items while stopped. During rotation or recovery, aircraft control takes priority; retain the verified evidence and record it at the next safe opportunity without leaving a sustained control input unattended.
+
+## Annunciator recall and arrival closeout
+
+- At initialization and before descent/approach, read `fire-and-emergency` with `read_group` and inspect the relevant system indications. Routine flight-deck instrument reads do not include all warnings and cautions.
+- For a system-annunciator Recall item, discover and use the documented recall control, then read the recalled annunciators and affected systems before marking it. Resetting a master-caution light is not a recall or evidence that the underlying condition is resolved; if recall cannot be verified, leave the item unmarked and report the limitation.
+- Identify each active warning or caution and follow its documented procedure while maintaining aircraft control. Acknowledge/reset a latched alert only after identifying the cause and confirming the appropriate response, then read both master indications and the underlying system annunciators again. Do not repeatedly reset, inhibit alerts, or change required configuration merely to extinguish lights.
+- After stopping and completing the applicable after-landing configuration, including any prescribed probe-heat OFF selection, repeat the warning/caution and system read-back: cleanup can introduce new indications. Distinguish expected ground indications from unresolved faults without undoing required checklist actions, and report anything still active or unreadable rather than claiming warnings clear or no unsafe conditions from checklist progress alone.
 
 ## Takeoff conditions to preserve
 
